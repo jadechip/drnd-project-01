@@ -42,3 +42,9 @@ pip install -r requirements.txt
 ```
 jupyter notebook
 ```
+
+## Links
+
+1. [Report](./Report.html)
+
+2. [Weights](./checkpoint.pth) 
