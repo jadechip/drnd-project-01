@@ -6,7 +6,8 @@
 
 # Project 1: Navigation
 
-:banana: :banana: :banana: :banana: :banana :banana: :banana: :banana: :banana: :banana
+:banana: :banana: :banana: :banana: :banana: :banana: :banana: :banana: :banana: :banana:
+:banana: :banana: :banana: :banana: :banana: :banana: :banana: :banana: :banana: :banana:
 
 ### Introduction
 
