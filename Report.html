@@ -22,6 +22,28 @@
       background-color: #eeeeee;
     }
 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 6px;
+    }
+
+    #banner {
+      text-align: center;
+    }
+
+    section h2 {
+      text-align: center;
+    }
+
     #content {
       background-color: #ffffff;
       width: 80%;
@@ -30,9 +52,24 @@
       padding: 24px;
     }
 
+    .img-container {
+      text-align: center;
+    }
+
+    .stretch img {
+      width: 100%;
+      height: auto;
+      max-width: 240px;
+    }
+
   </style>
 
   <div id="content">
+
+    <section id="banner">
+      <h1>Project 1: Navigation</h1>
+      <div class="img-container stretch"><img src="./img/training.gif" alt="Training process"></div>
+    </section>
 
     <section>
 
@@ -40,37 +77,67 @@
       <p>
         When approaching the problem of solving the "Banana Collector" environment, I relied heavily on the 
         knowledge and intuition gained from earlier chapters from the course, ranging back to Markov Decision Processes
-        and Temporal Difference learning, but especielly the material on DQN.
+        and Temporal Difference learning, but especially the material on DQN.
 
         I therefore decided to base my implementation on the algorithm used to solve the "Lunar Lander" environment. 
-        I found that the agent was able to complete the task and achieve a score greater than 13 within the first 200 episodes.
+
+        I found that the agent was able to complete the task and achieve a score greater than 13 in 606 episodes with a final score of 13.03.
+        I later modified the agent to use a "Double DQN" strategy, which resulted in a slight performance boost. Specifically, the agent managed to solve the environment 
+        in 596 episodes, with an average score of 13.02.
+
+        Please see the plots and tables below for more information.
         
       </p>
 
       A link to the original paper on DQN can be found <a href="https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf">here</a>.
 
+      
+      <table>
+        <tr>
+          <th>Episode #</th><th>Average Score</th>
+        </tr>
+        <tr><td>100</td><td>0.46</td></tr>
+        <tr><td>200</td><td>3.20</td></tr>
+        <tr><td>300</td><td>4.88</td></tr>
+        <tr><td>400</td><td>4.63</td></tr>
+        <tr><td>500</td><td>7.50</td></tr>
+        <tr><td>600</td><td>10.58</td></tr>
+        <tr><td>700</td><td>12.84</td></tr>
+        <tr><td>706</td><td>13.03</td></tr>
+      </table>
+
+      <div class="img-container"><img src="./img/dqn.png" alt="Vanilla DQN"></div>
+
+      <table>
+        <tr>
+          <th>Episode #</th><th>Average Score</th>
+        </tr>
+        <tr><td>100</td><td>0.32</td></tr>
+        <tr><td>200</td><td>1.31</td></tr>
+        <tr><td>300</td><td>5.75</td></tr>
+        <tr><td>400</td><td>7.11</td></tr>
+        <tr><td>500</td><td>8.96</td></tr>
+        <tr><td>600</td><td>11.09</td></tr>
+        <tr><td>696</td><td>13.02</td></tr>
+      </table>
+      <h3>Environment solved in 596 episodes!	Average Score: 13.02</h3>
+
+      <div class="img-container"><img src="./img/ddqn.png" alt="Double DQN"></div>
+
     </section>
+
+
+
     <section>
 
       <h2>Obstacles & Future improvements</h2>
       <p>
-        In order to submit the project before the recommended deadline, I had to allocate my time carefully.
-        I decided to focus on gaining a solid understanding of the main components of the DQN algorithm.
-
-        Furthermore I had some trouble getting the environment up and running successfully, which further delayed my
-        submission.
-
-        As a result I was unable to add certain improvements to the basic implementation of DQN,
-        such as Dueling DQN and Prioritized Experience Replay. 
-
-        The next step would involve modifying the algorithm with the aforementioned techniques, as well as trying my hand
+        The next step would involve modifying the algorithm with the techniques such as Dueling DQN and Prioritized Experience Replay, as well as trying my hand
         at implementing the pixels to action version of the project.
 
         I would also like to experiment with the neural network architecture by changing the number
-        of layers and neurons, and inspect how it would affect the output.
-        
-        Lastly, it is my goal to learn more about Pytorch and its syntax. I am quite new to the framework, and
-        I would greatly benefit from spending some more time with the documentation.
+        of layers and neurons, and inspect how it would affect the output.            
+      </p>
       
     </section>
 
