@@ -60,6 +60,6 @@ jupyter notebook
 
 ## Links
 
-1. [Report](./Report.html)
+1. [Report](https://skogman.github.io/drnd-project-01/)
 
 2. [Weights](./checkpoint.pth) 
