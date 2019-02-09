@@ -63,7 +63,3 @@ jupyter notebook
 1. [Report](./Report.html)
 
 2. [Weights](./checkpoint.pth) 
-
----
-permalink: /index.html
----
